@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Dataset (do not upload images)
+data/raw/
+
+# Trained models
+models/saved/
