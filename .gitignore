@@ -10,3 +10,5 @@ data/raw/
 
 # Trained models
 models/saved/
+*.h5
+*.zip
