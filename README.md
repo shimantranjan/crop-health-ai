@@ -1,196 +1,478 @@
 # 🌿 Crop Health AI
-> An artificial intelligence system that detects crop health conditions and plant diseases using computer vision and machine learning models.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green?logo=open-source-initiative&logoColor=white)
-![Repo Size](https://img.shields.io/github/repo-size/shimantranjan/crop-health-ai)
-![Last Commit](https://img.shields.io/github/last-commit/shimantranjan/crop-health-ai)
-![Stars](https://img.shields.io/github/stars/shimantranjan/crop-health-ai?style=social)
+<div align="center">
 
-## 📖 Project Overview
-Crop Health AI is an artificial intelligence system that detects crop health conditions and plant diseases using computer vision and machine learning models. The system analyzes crop images, performs preprocessing and feature extraction, and predicts whether the plant is healthy or affected by disease.
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge\&logo=python)
+![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge\&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge\&logo=fastapi)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge\&logo=tailwindcss)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge\&logo=pytorch)
+![PWA](https://img.shields.io/badge/PWA-Enabled-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-The goal of the project is to demonstrate how machine learning can support farmers, agritech developers, and researchers in monitoring plant health and improving agricultural productivity.
+### AI-Powered Real-Time Crop Disease Detection & Smart Agricultural Diagnostics Platform
 
-## ❗ Problem Statement
-Plant diseases are difficult to detect early, and manual inspection is slow, labor-intensive, and prone to human error. Late detection of crop diseases leads to significant agricultural losses and threatens food security. An automated, fast, and accurate early detection system is essential for timely intervention and crop preservation.
+An advanced full-stack computer vision system designed for intelligent plant pathology analysis using deep learning, real-time inference pipelines, live camera diagnostics, and modern AI-assisted agricultural monitoring.
 
-## 💡 Solution Approach
-Crop Health AI utilizes computer vision and deep learning models to analyze leaf images. By processing these images through sophisticated neural networks, the system can extract complex visual patterns and predict crop health with high accuracy, functioning as an intelligent, automated agricultural assistant.
-
-## ✨ Key Features
-- 🍂 **Crop disease detection from leaf images**
-- 🖼️ **Image preprocessing and normalization**
-- 🧠 **Feature extraction using deep learning**
-- ⚙️ **Machine learning model training pipeline**
-- 📊 **Prediction confidence scoring**
-- � **Visualization of prediction results**
-- � **Ready for integration with web or mobile apps**
-
-## 🛠️ Technology Stack
-- **Python**
-- **TensorFlow** / **PyTorch**
-- **OpenCV**
-- **NumPy**
-- **Pandas**
-- **Scikit-learn**
-- **Matplotlib**
-- **Jupyter Notebook**
-- **Flask** / **FastAPI** (Optional API backend)
-
-## 🏗️ System Architecture
-
-**AI Pipeline Model:**  
-`Image Input` → `Image Preprocessing` → `Feature Extraction` → `ML Model` → `Prediction` → `Output`
-
-```mermaid
-graph TD
-    A[Image Input] --> B[Image Preprocessing]
-    B --> C[Feature Extraction]
-    C --> D[Machine Learning Model]
-    D --> E[Prediction]
-    E --> F{Output}
-    F -->|Healthy| G[Healthy Plant]
-    F -->|Diseased| H[Disease Identified]
-```
-
-## 🔄 AI Pipeline Explanation
-
-- **📸 Image Acquisition:** Collecting high-quality leaf images of various crop species in both healthy and diseased states.
-- **⚙️ Preprocessing:** Resizing images, normalizing pixel values, and applying data augmentation to improve model robustness.
-- **🧬 Feature Extraction:** Using convolutional layers to automatically learn and extract granular patterns, textures, and features from the leaf images.
-- **🧠 Model Prediction:** The core deep learning model analyzes the extracted features and outputs a probability distribution across the possible classes.
-- **📊 Result Visualization:** Displaying the final prediction with a confidence score and visual overlays for the user to interpret.
-
-## 🗂️ Dataset Information
-- **Dataset Source:** *Placeholder - e.g., PlantVillage Dataset*
-- **Number of Classes:** *Placeholder - e.g., 15 (14 disease classes, 1 healthy class)*
-- **Image Resolution:** *Placeholder - e.g., 256x256 pixels*
-- **Preprocessing Steps:** Resizing, Normalization (`0-1` scaling), and Augmentation (Rotation, Flipping, Contrast shift).
-- **Dataset Citation:** *(Insert citation if applicable)*
-
-## 🧠 Model Architecture
-The primary architecture relies on advanced deep learning models such as **CNN (Convolutional Neural Networks)**, **ResNet**, or Transfer Learning models (e.g., MobileNet, VGG16).
-
-- **Input Layer:** Receives the preprocessed RGB images.
-- **Convolution Layers:** Extracts spatial features using variable filter sizes.
-- **Pooling Layers:** Reduces dimensionality (e.g., MaxPooling) while retaining critical information.
-- **Classification Output:** Fully connected dense layers terminating in a Softmax activation for multi-class probability prediction.
-
-## � Model Performance
-
-- **Accuracy:** `94%`
-- **Precision:** `92%`
-- **Recall:** `91%`
-- **F1 Score:** `91%`
-
-*Placeholders for Visual Metrics:*
-- **Confusion Matrix:** *(Insert confusion matrix visualization here)*
-- **Training Graphs:** *(Insert loss/accuracy over epochs graph here)*
-
-## 📂 Project Folder Structure
-
-```text
-Crop-Health-AI
-│
-├── dataset/
-│   └── crop leaf images...
-│
-├── models/
-│   └── trained ML models...
-│
-├── notebooks/
-│   └── training and experimentation notebooks...
-│
-├── src/
-│   ├── preprocessing.py
-│   ├── train_model.py
-│   ├── predict.py
-│   └── utils.py
-│
-├── app/
-│   └── optional web/API interface...
-│
-├── requirements.txt
-├── main.py
-└── README.md
-```
-
-## 💻 Installation Guide
-
-Clone the repository and install the dependencies:
-
-```bash
-git clone https://github.com/shimantranjan/crop-health-ai.git
-cd Crop-Health-AI
-pip install -r requirements.txt
-```
-
-## 🚀 Running the Project
-
-To run the main application or pipeline:
-```bash
-python main.py
-```
-Or to initiate model training:
-```bash
-python src/train_model.py
-```
-
-## 🔍 Running Predictions
-
-Run a prediction on an individual leaf image:
-```bash
-python src/predict.py --image sample_leaf.jpg
-```
-**Example Output:**
-```json
-{
-  "predicted_class": "Potato___Early_blight",
-  "confidence": 0.98,
-  "status": "Diseased"
-}
-```
-
-## �️ Example Workflow
-1. **Upload Image:** Provide a crop leaf image to the system.
-2. **Model Analysis:** The system preprocesses the image and passes it through the AI model.
-3. **Prediction:** The model scores the image against known diseases.
-4. **Result Display:** The predicted disease class and confidence metric are shown to the user.
-
-## 🖼️ Visuals Section
-
-![Architecture Diagram](docs/architecture_placeholder.png)
-*(Caption: System Architecture Diagram)*
-
-![Model Training Graph](docs/training_graph_placeholder.png)
-*(Caption: Model Training Accuracy and Loss)*
-
-![Prediction Example](docs/prediction_placeholder.png)
-*(Caption: Sample Prediction Result)*
-
-## 🔮 Future Improvements
-- 📱 Mobile app integration for on-the-field usage.
-- 🚁 Drone-based crop monitoring for large-scale farms.
-- 🌍 Larger datasets covering more plant species and geographies.
-- 🧬 Advanced deep learning models (e.g., Vision Transformers).
-- 📡 Real-time monitoring systems connected to IoT edge devices.
-
-## 🤝 Contributing
-Contributions are warmly welcomed to improve the AI models, expand the dataset, or enhance the application interfaces.
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/NewFeature`)
-3. Commit your Changes (`git commit -m 'Add some NewFeature'`)
-4. Push to the Branch (`git push origin feature/NewFeature`)
-5. Open a Pull Request
-
-## 📜 License
-Distributed under the MIT License. See `LICENSE` for more information.
+</div>
 
 ---
 
-## 👨‍💻 Author
+# 📌 Overview
 
-**Shimant Ranjan**
+Crop Health AI is a production-grade agricultural intelligence platform engineered to detect and classify crop diseases using convolutional neural networks and real-time computer vision.
 
-*A senior AI researcher and open-source maintainer with a deep interest in AI, blockchain, and building intelligent systems that drive real-world impact.*
+The platform combines:
+
+* Deep Learning-based disease classification
+* Real-time camera diagnostics
+* Intelligent pathology reporting
+* Voice-assisted AI narration
+* Modern React analytics dashboard
+* FastAPI inference engine
+* Tailwind-powered premium UI/UX
+* Progressive Web App (PWA) architecture
+
+The system is optimized for:
+
+* Farmers
+* Agricultural researchers
+* Precision farming solutions
+* Plant pathology labs
+* Smart greenhouse systems
+* AI-driven crop monitoring ecosystems
+
+---
+
+# 🚀 Key Features
+
+## 🧠 AI Disease Detection
+
+* CNN-powered crop disease classification
+* Real-time inference engine
+* Confidence score analysis
+* Smart pathology interpretation
+* Dynamic disease reporting
+* Multi-class prediction support
+
+---
+
+## 📷 Live Camera Detection
+
+* Browser-based live camera streaming
+* Real-time frame capture
+* AI inference from live video feed
+* Smart detection stabilization
+* Continuous pathology monitoring
+* Instant disease reporting
+
+---
+
+## 🎙️ AI Voice Narration
+
+* Speech synthesis integration
+* Disease explanation narration
+* Confidence reporting through voice
+* Natural browser voice support
+* AI pathology verbal summaries
+
+---
+
+## 📊 Modern Analytics Dashboard
+
+* Responsive premium dashboard
+* Real-time scan metrics
+* Detection history visualization
+* System telemetry monitoring
+* AI operational status tracking
+* Dynamic pathology panels
+
+---
+
+## 🎨 Advanced UI / UX
+
+* TailwindCSS-based modern interface
+* Premium dark glassmorphism design
+* Framer-motion inspired interactions
+* Responsive mobile-first layout
+* Compact enterprise dashboard styling
+* Smooth transitions & animations
+
+---
+
+## ⚡ FastAPI Backend
+
+* High-performance inference APIs
+* Async request handling
+* Image upload endpoints
+* Voice response support
+* Efficient model loading pipeline
+* Optimized for low-latency inference
+
+---
+
+## 📱 Progressive Web App (PWA)
+
+* Installable application support
+* Offline-ready frontend architecture
+* Mobile optimized
+* Lightweight deployment model
+* Enhanced browser compatibility
+
+---
+
+# 🏗️ System Architecture
+
+```text
+┌──────────────────────────────────────────────┐
+│                 Frontend UI                 │
+│        React + TypeScript + Tailwind        │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│             Live Detection Layer            │
+│     Camera Stream + Frame Capture Engine    │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│               FastAPI Backend               │
+│        Prediction APIs + Voice Engine       │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│              Deep Learning Model            │
+│        PyTorch CNN Classification Core      │
+└──────────────────────────────────────────────┘
+                     │
+                     ▼
+┌──────────────────────────────────────────────┐
+│             Disease Intelligence            │
+│   Symptoms • Causes • Treatment • Reports   │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+# 🧰 Tech Stack
+
+| Layer            | Technology          |
+| ---------------- | ------------------- |
+| Frontend         | React + TypeScript  |
+| Styling          | TailwindCSS         |
+| Backend          | FastAPI             |
+| ML Framework     | PyTorch             |
+| Language         | Python              |
+| Build Tool       | Vite                |
+| State Handling   | React Hooks         |
+| Voice Engine     | SpeechSynthesis API |
+| Camera Access    | MediaDevices API    |
+| Deployment Ready | PWA                 |
+| Package Manager  | npm                 |
+
+---
+
+# 📂 Project Structure
+
+```bash
+crop-health-ai-pro/
+│
+├── backend/
+│   ├── api/
+│   ├── audio/
+│   ├── core/
+│   ├── models/
+│   ├── routes/
+│   ├── main.py
+│   ├── brain.py
+│   ├── train.py
+│   ├── model.pth
+│   └── requirements.txt
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── LiveDetection.tsx
+│   │   │   ├── ImageUpload.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   └── StatsCard.tsx
+│   │   │
+│   │   ├── pages/
+│   │   │   ├── Dashboard.tsx
+│   │   │   ├── Analytics.tsx
+│   │   │   └── Home.tsx
+│   │   │
+│   │   ├── services/
+│   │   ├── config/
+│   │   ├── data/
+│   │   ├── utils/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   └── index.css
+│   │
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── tailwind.config.js
+│
+├── data/
+├── models/
+├── mobile/
+└── README.md
+```
+
+---
+
+# ⚙️ Installation Guide
+
+# 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/shimantranjan/crop-health-ai.git
+```
+
+```bash
+cd crop-health-ai
+```
+
+---
+
+# 2️⃣ Backend Setup
+
+```bash
+cd backend
+```
+
+## Create Virtual Environment
+
+### macOS / Linux
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run Backend
+
+```bash
+uvicorn main:app --reload --port 8001
+```
+
+Backend runs at:
+
+```text
+http://127.0.0.1:8001
+```
+
+---
+
+# 3️⃣ Frontend Setup
+
+Open a new terminal.
+
+```bash
+cd frontend
+```
+
+## Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+## Run Frontend
+
+```bash
+npm run dev
+```
+
+Frontend runs at:
+
+```text
+http://localhost:5173
+```
+
+---
+
+# 🧪 Build Production Version
+
+## Frontend Build
+
+```bash
+npm run build
+```
+
+---
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+# 🧠 AI Model Pipeline
+
+The deep learning inference pipeline performs:
+
+1. Image preprocessing
+2. Frame normalization
+3. CNN-based feature extraction
+4. Disease probability estimation
+5. Confidence scoring
+6. Smart pathology interpretation
+7. Voice narration generation
+8. UI telemetry synchronization
+
+---
+
+# 📸 Live Camera Workflow
+
+The live inference engine uses:
+
+```text
+navigator.mediaDevices.getUserMedia()
+```
+
+for:
+
+* Real-time camera access
+* Browser stream management
+* Dynamic frame extraction
+* AI-based periodic scanning
+* Continuous pathology monitoring
+
+---
+
+# 🔊 Voice Intelligence Engine
+
+The platform integrates browser-native speech synthesis:
+
+```text
+window.speechSynthesis
+```
+
+Features include:
+
+* AI disease narration
+* Confidence verbalization
+* Human-readable pathology summaries
+* Smart voice selection
+
+---
+
+# 📈 Future Enhancements
+
+* Multilingual AI narration
+* Cloud inference scaling
+* TensorRT optimization
+* Edge AI deployment
+* Mobile-native Flutter application
+* IoT greenhouse integration
+* Drone-assisted crop monitoring
+* Real-time agricultural analytics
+* LLM-assisted crop advisory
+* Weather-integrated disease prediction
+
+---
+
+# 🔒 Security & Performance
+
+* Async FastAPI architecture
+* Efficient model loading
+* Optimized inference handling
+* Frontend code splitting
+* Lightweight PWA build
+* Cached inference assets
+* Reduced latency inference pipeline
+
+---
+
+# 🧑‍💻 Development Notes
+
+The project was architected with a focus on:
+
+* Production-ready modularity
+* Scalable frontend architecture
+* Real-time inference stability
+* Enterprise dashboard aesthetics
+* Maintainable TypeScript structure
+* AI-first agricultural workflows
+
+---
+
+# 🤝 Contribution
+
+Contributions are welcome.
+
+## Steps
+
+1. Fork the repository
+2. Create feature branch
+3. Commit changes
+4. Push branch
+5. Open Pull Request
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+---
+
+# 👨‍💻 Author
+
+## Shimant Ranjan
+
+AI/ML Developer • Full Stack Developer • Computer Vision Enthusiast
+
+Focused on building intelligent systems combining:
+
+* Artificial Intelligence
+* Deep Learning
+* Computer Vision
+* Real-Time Systems
+* Modern Frontend Engineering
+* Agricultural Technology
+
+---
+
+# ⭐ Support
+
+If you found this project valuable:
+
+* Star the repository
+* Share with developers
+* Contribute improvements
+* Fork the project
+
+---
+
+<div align="center">
+
+## 🌱 Building Smarter Agriculture with Artificial Intelligence
+
+</div>
